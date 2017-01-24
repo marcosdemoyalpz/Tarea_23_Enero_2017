@@ -1,0 +1,14 @@
+{
+    "dependencies": {
+        "consolidate": "^0.14.5",
+        "express": "^4.14.0",
+        "jade": "^1.11.0",
+        "serve-favicon": "^2.3.2"
+    },
+    "name": "Tarea-1-20-2017",
+    "version": "1.0.0",
+    "description": "Create a program that outputs the HTTP method, Path, Port, and Header fields as a JSON object on the body of the Web server's response.",
+    "main": "index.js",
+    "author": "Marcos De Moya",
+    "license": "MIT"
+}
