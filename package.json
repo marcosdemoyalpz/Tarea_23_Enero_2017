@@ -1,14 +1,16 @@
 {
     "dependencies": {
+        "body-parser": "^1.16.0",
         "consolidate": "^0.14.5",
         "express": "^4.14.0",
         "jade": "^1.11.0",
         "serve-favicon": "^2.3.2"
     },
-    "name": "Tarea-1-20-2017",
+    "name": "Tarea-1-23-2017",
     "version": "1.0.0",
-    "description": "Create a program that outputs the HTTP method, Path, Port, and Header fields as a JSON object on the body of the Web server's response.",
-    "main": "index.js",
+    "description": "Submit the form using the POST method, your server should respond with a JSON object.",
+    "main": "app.js",
     "author": "Marcos De Moya",
-    "license": "MIT"
+    "license": "MIT",
+    "repository": "https://github.com/marcosdemoyalpz/Tarea_23_Enero_2017.git"
 }
