@@ -38,7 +38,7 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/vanilla-masker.min.js"></script>
 
-    <script>
+    <!--<script>
         $(document).ready(function() {
             var user, pass;
             $("#submit").click(function() {
@@ -49,10 +49,10 @@
                     "username": user,
                     "password": pass
                 }
-                $.post(window.location.pathname, jsonObj);
+                $.post(window.location.pathname + '?' + 'user=' + user + "&" + 'pass=' + pass);
             });
         });
-    </script>
+    </script>-->
 
 </head>
 
