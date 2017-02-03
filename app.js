@@ -4,8 +4,8 @@ var app = express();
 
 app.set('json spaces', 2);
 
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
@@ -63,6 +63,17 @@ app.get('*', function(req, res) {
     }
 });
 
+app.post('/login', function(req, res) {
+    var jsonObj = {
+        "username": req.body.username,
+        "password": req.body.password
+    }
+    res.set({
+        'content-type': 'application/json'
+    })
+    res.send(JSON.parse(JSON.stringify(req.body)));
+});
+
 app.post('*', function(req, res) {
 
     var login = false;
@@ -75,22 +86,6 @@ app.post('*', function(req, res) {
         res.sendStatus(500);
     } else if (req.path.includes('/notimplemented')) {
         res.sendStatus(200);
-    } else if (req.path.includes('/login')) {
-        login = true;
-    }
-    if (login) {
-
-        var user = req.body.user;
-        var pass = req.body.pass;
-
-        var jsonObj = {
-            "username": user,
-            "password": pass
-        }
-        res.set({
-            'Content-Type': 'application/json'
-        })
-        res.send(jsonObj);
     }
 });
 
